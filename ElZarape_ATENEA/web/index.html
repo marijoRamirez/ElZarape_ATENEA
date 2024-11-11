@@ -1,15 +1,38 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Login</title>
+    <link rel="stylesheet" href="CSS/Opcion.css">
+    <link rel="icon" href="IMG/opcionLogoZarape.png" type="image/x-icon">
+</head>
+
+<div class="container">
     <body>
-        <div>TODO write content</div>
+        <header>
+            <div class="encabezado">
+                <img src="IMG/opcionLogoZarape.png" alt="alt" />
+                <h1>EL ZARAPE</h1>
+            </div>
+
+        </header>
+        <div class="login-container">
+            <form class="login-form" action="menuPrincipal.html" method="GET">
+                <h2>Iniciar Sesión</h2>
+                <div class="input-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
     </body>
+</div>
+
 </html>
