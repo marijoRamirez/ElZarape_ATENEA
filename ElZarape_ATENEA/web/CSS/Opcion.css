@@ -1,0 +1,180 @@
+/* Reseteo de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FEF3E2;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(../IMG/fondo.png);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+body,
+h1,
+ul,
+li,
+a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/* Estilo del encabezado */
+header {
+    background: #FA4032;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header .encabezado {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    max-width: 7em;
+}
+
+header h1 {
+    font-size: 2em;
+    flex-grow: 1;
+    text-align: center;
+}
+
+header h2 {
+    font-size: 1.5em;
+    color: #ccc;
+    text-align: right;
+}
+
+header .menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0;
+}
+
+header .menu li {
+    margin: 0 10px;
+}
+
+header .menu a {
+    color: #FEF3E2;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header .menu a:hover {
+    color: #FEF3E2;
+}
+
+/*Estilos para Login*/
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-left: 70px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"],
+button {
+    padding: 10px 20px;
+    background-color: #FA4032;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FAAF08;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button-container button img {
+    margin-bottom: 10px;
+    width: 100px;
+    /* Ajusta el tamaño de las imágenes si es necesario */
+    height: 100px;
+}
+
+/* Estilos para el overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}

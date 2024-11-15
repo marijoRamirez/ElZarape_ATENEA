@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Combos</title>
+        <link href="CSS/General.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+        <link rel="stylesheet" href="CSS/bootstrap.css" />
+        <link rel="icon" href="IMG/opcionLogoZarape.png" type="image/x-icon">
+    </head>
+
+    <body>
+
+        <header>
+            <div class="encabezado">
+                <img src="IMG/opcionLogoZarape.png" alt="alt"/>
+                <h1>EL ZARAPE</h1>
+                <h2>Combos</h2>
+            </div>
+            <ul class="menu">
+                <li><a href="menuPrincipal.html">Menu Principal</a></li>
+                <li><a href="Sucursal.html">Sucursales</a></li>
+                <li><a href="Empleados.html">Empleados</a></li>
+                <li><a href="Alimentos.html">Alimentos</a></li>
+                <li><a href="Bebidas.html">Bebidas</a></li>
+                <li><a href="Combos.html">Combos</a></li>
+            </ul>
+        </header>
+
+        <div class="iconos">
+            <button class="abrirForm" data-form="formAgregar"><img src="IMG/Agregar.png" alt="alt"/> Añadir</button>
+            <button class="abrirForm" data-form="formBuscar"><img src="IMG/Buscar.png" alt="alt"/>Buscar</button>
+            <button id="botonReporte" class="botonReporte"><img src="IMG/Reporte.png" alt="Reporte" /> Reporte</button>
+        </div>  
+
+        <div class="popupForm" id="formAgregar">
+            <div class="contenido">
+                <div class="columna">
+                    <form>
+                        <label for="nombreCombo">Nombre:</label>
+                        <input type="text" id="nombreCombo" name="nombreCombo">
+                        <label for="descripcionCombo">Descripcion:</label>
+                        <input type="text" id="descripcionCombo" name="descripcionCombo">
+                        <label for="precioCombo">Precio:</label>
+                        <input type="number" id="precioCombo" name="precioCombo">
+                        <input type="button" value="Agregar" onclick="agregarCombo();">
+                    </form>
+                </div>
+                <div class="columna imagen-container">
+                    <img src="IMG/nada.jpg" alt="Imagen previa" id="imagenPreviewAgregar">
+                    <input type="file" id="fotoCombo" name="imagen" accept="image/*">
+                </div>
+                <button class="cerrarForm">X</button>
+            </div>
+
+        </div>
+
+        <div class="popupForm" id="formAgregarProductos">
+            <div class="contenido">
+                <div class="columna">
+                    <form>
+                        <label for="nombreProducto">nombre:</label>
+                        <select id="nombreProducto" name="nombreProducto">
+                            <option value="Chile frito">Chile frito</option>
+                            <option value="Torta de tamal">Torta de tamal</option>
+                            <option value="Pozole de Lavadero">Pozole de Lavadero</option>
+                            <option value="Tacos de Tacos el Tommy">Tacos de Tacos el Tommy</option>
+                            <option value="Guayaba">Guayaba</option>
+                        </select>
+                        <label for="cantidadProducto">cantidad:</label>
+                        <input type="number" id="cantidadProducto" name="cantidadProducto">
+                        <input type="button" value="AgregarProducto" onclick="agregarDetalle();">
+                        <input type="submit" value="Guardar">
+                    </form>
+                    <!-- Empiezan tablas para meter datos -->
+            <div class="contenedor-tabla">
+                <!-- FILA DE TABLA -->
+                <div class="fila">  
+                    <div class="columna-tabla">
+                        <h5>Detalles del combo</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">cantidad</th>
+                                    <th scope="col">Foto</th>
+                                    <th scope="col">Estatus</th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tblDetalleCombo2">
+                                <!-- Los datos de la tabla se insertarán aquí -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+     
+
+                    <button class="cerrarForm">X</button>
+                </div>
+            </div>
+        </div>
+
+   
+
+    <div class="popupForm" id="formBuscar">
+        <div class="contenido">
+            <div class="columna">
+                <form>
+                    <label for="idCombo">ID:</label>
+                    <input type="text" id="idCombo" name="idCombo">
+                    <button type="button" onclick="buscarCombo();">Buscar</button>
+                </form>
+            </div>
+
+
+            <button class="cerrarForm">X</button>
+        </div>
+    </div>
+
+    <div class="popupForm" id="formActualizar">
+        <div class="contenido">
+            <div class="columna">
+                <form>
+                    <h2> Combo </h2>         
+                <input type="hidden" id="idComboActualizar" name="idComboActualizar">
+                <label for="nombreComboActualizar">Nombre:</label>
+                <input type="text" id="nombreComboActualizar" name="nombreComboActualizar">
+                <label for="descripcionComboActualizar">Descripcion:</label>
+                <input type="text" id="descripcionComboActualizar" name="descripcionComboActualizar">
+                <label for="precioComboActualizar">Precio:</label>
+                <input type="number" id="precioComboActualizar" name="precioComboActualizar">
+                <label for="estatusActualizar">Estatus:</label>
+                    <select id="estatusActualizar" name="estatusActualizar">
+                        <option value="Activo">Activo</option>
+                        <option value="Inactivo">Inactivo</option>
+                    </select>
+                <br>
+                <input type="button" value="Guardar" onclick="modificarCombo()">
+                <input type="button" value="Agregar Producto" onclick="mostrarAgregarOtroProducto()">
+                </form>
+            </div>  
+            <div class="columna imagen-container">
+                    <img src="" alt="Imagen previa" id="imagenPreviewActualizar">
+                    <input type="file" id="fotoComboActualizar" name="imagen" accept="image/*">
+                </div>
+            
+            <button class="cerrarForm">X</button>
+        
+       <!-- Empiezan tablas para meter datos -->
+            <div class="contenedor-tabla">
+                <!-- FILA DE TABLA -->
+                <div class="fila">  
+                    <div class="columna-tabla">
+                        <h5>Detalles del combo</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">cantidad</th>
+                                    <th scope="col">Foto</th>
+                                    <th scope="col">Estatus</th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tblDetalleCombo">
+                                <!-- Los datos de la tabla se insertarán aquí -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Empiezan tablas para meter datos -->
+    <div class="contenedor-tabla">
+        <!-- FILA DE TABLA -->
+        <div class="fila">  
+            <div class="columna-tabla">
+                <h5>Lista de Combos</h5>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Descripcion</th>
+                            <th scope="col">Foto</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Estatus</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tblCombo">
+                        <!-- Los datos de la tabla se insertarán aquí -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/popUp.js"></script>
+    <script src="JS/GestionCombos.js"></script>
+</body>
+
+</html>
