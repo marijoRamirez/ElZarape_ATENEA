@@ -1,28 +1,36 @@
 package atenea.dsm.zarape.model;
 
-public class Sucursal {
 
+public class Sucursal {
     private int IdSucursal;
     private String NombreSucursal;
-    private String UbicacionSucursal;
     private String LatitudSucursal;
     private String LongitudSucursal;
-    private String HoraInicioSucursal;
-    private String urlFoto;
-    private boolean Estatus;
-
+    private String HorariosSucursal;
+    private String urlWebSucursal;
+    private Long fotoSucursal;
+    private String calleSucursal;
+    private String numCalleSucursal;
+    private String coloniaSucursal;
+    private int idCiudad;
+    private boolean estatusSucursal;
+    
     public Sucursal() {
     }
 
-    public Sucursal(int IdSucursal, String NombreSucursal, String UbicacionSucursal, String LatitudSucursal, String LongitudSucursal, String HoraInicioSucursal, String urlFoto, boolean Estatus) {
+    public Sucursal(int IdSucursal, String NombreSucursal, String LatitudSucursal, String LongitudSucursal, String HorariosSucursal, String urlWebSucursal, Long fotoSucursal, String calleSucursal, String numCalleSucursal, String coloniaSucursal, int idCiudad, boolean estatusSucursal) {
         this.IdSucursal = IdSucursal;
         this.NombreSucursal = NombreSucursal;
-        this.UbicacionSucursal = UbicacionSucursal;
         this.LatitudSucursal = LatitudSucursal;
         this.LongitudSucursal = LongitudSucursal;
-        this.HoraInicioSucursal = HoraInicioSucursal;
-        this.urlFoto = urlFoto;
-        this.Estatus = Estatus;
+        this.HorariosSucursal = HorariosSucursal;
+        this.urlWebSucursal = urlWebSucursal;
+        this.fotoSucursal = fotoSucursal;
+        this.calleSucursal = calleSucursal;
+        this.numCalleSucursal = numCalleSucursal;
+        this.coloniaSucursal = coloniaSucursal;
+        this.idCiudad = idCiudad;
+        this.estatusSucursal = estatusSucursal;
     }
 
     public int getIdSucursal() {
@@ -41,14 +49,6 @@ public class Sucursal {
         this.NombreSucursal = NombreSucursal;
     }
 
-    public String getUbicacionSucursal() {
-        return UbicacionSucursal;
-    }
-
-    public void setUbicacionSucursal(String UbicacionSucursal) {
-        this.UbicacionSucursal = UbicacionSucursal;
-    }
-
     public String getLatitudSucursal() {
         return LatitudSucursal;
     }
@@ -65,28 +65,71 @@ public class Sucursal {
         this.LongitudSucursal = LongitudSucursal;
     }
 
-    public String getHoraInicioSucursal() {
-        return HoraInicioSucursal;
+    public String getHorariosSucursal() {
+        return HorariosSucursal;
     }
 
-    public void setHoraInicioSucursal(String HoraInicioSucursal) {
-        this.HoraInicioSucursal = HoraInicioSucursal;
+    public void setHorariosSucursal(String HorariosSucursal) {
+        this.HorariosSucursal = HorariosSucursal;
     }
 
-    public String getUrlFoto() {
-        return urlFoto;
+    public String getUrlWebSucursal() {
+        return urlWebSucursal;
     }
 
-    public void setUrlFoto(String urlFoto) {
-        this.urlFoto = urlFoto;
+    public void setUrlWebSucursal(String urlWebSucursal) {
+        this.urlWebSucursal = urlWebSucursal;
     }
 
-    public boolean isEstatus() {
-        return Estatus;
+    public Long getFotoSucursal() {
+        return fotoSucursal;
     }
 
-    public void setEstatus(boolean Estatus) {
-        this.Estatus = Estatus;
+    public void setFotoSucursal(Long fotoSucursal) {
+        this.fotoSucursal = fotoSucursal;
     }
 
+    public String getCalleSucursal() {
+        return calleSucursal;
+    }
+
+    public void setCalleSucursal(String calleSucursal) {
+        this.calleSucursal = calleSucursal;
+    }
+
+    public String getNumCalleSucursal() {
+        return numCalleSucursal;
+    }
+
+    public void setNumCalleSucursal(String numCalleSucursal) {
+        this.numCalleSucursal = numCalleSucursal;
+    }
+
+    public String getColoniaSucursal() {
+        return coloniaSucursal;
+    }
+
+    public void setColoniaSucursal(String coloniaSucursal) {
+        this.coloniaSucursal = coloniaSucursal;
+    }
+
+    public int getIdCiudad() {
+        return idCiudad;
+    }
+
+    public void setIdCiudad(int idCiudad) {
+        this.idCiudad = idCiudad;
+    }
+
+    public boolean isEstatusSucursal() {
+        return estatusSucursal;
+    }
+
+    public void setEstatusSucursal(boolean estatusSucursal) {
+        this.estatusSucursal = estatusSucursal;
+    }
+    
+    
+    
+    
 }
