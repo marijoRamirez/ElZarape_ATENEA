@@ -37,4 +37,10 @@ public class Bebida {
         this.producto = producto;
     }
 
+    @Override
+    public String toString() {
+        return "Bebida{" + "idBebida=" + idBebida + ", producto=" + producto + '}';
+    }
+
+    
 }
