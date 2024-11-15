@@ -12,6 +12,7 @@ public class Cliente {
     private int idCliente;
     private Persona persona;
     private int activo;
+    private Usuario usuario;
 
     public Cliente() {
     }
@@ -46,12 +47,24 @@ public class Cliente {
         this.activo = activo;
     }
 
+    
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
     @Override
     public String toString() {
-        return "Cliente {" +
-                "idCliente=" + idCliente +
-                ", persona=" + (persona != null ? persona.toString() : "null") +
-                ", activo='" + activo + '\'' +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Cliente{");
+        sb.append("idCliente=").append(idCliente);
+        sb.append(", persona=").append(persona);
+        sb.append(", activo=").append(activo);
+        sb.append(", usuario=").append(usuario);
+        sb.append('}');
+        return sb.toString();
     }
 }

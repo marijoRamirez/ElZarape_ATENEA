@@ -1,34 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package atenea.dsm.zarape.model;
 
 /**
  *
- * @author HP
+ * @author Emmanuel Ortiz Reyes
  */
 public class Empleado {
+
     private int idEmpleado;
     private int idSucursal;
-    private int idPersona;
-    private int idUsuario;
+    private Persona persona;
+    private Usuario usuario;
     private int activo;
 
     // Constructor vacío
     public Empleado() {
     }
 
-    // Constructor con parámetros
-    public Empleado(int idEmpleado, int idSucursal, int idPersona, int idUsuario, int activo) {
+    public Empleado(int idEmpleado, int idSucursal, Persona persona, Usuario usuario, int activo) {
         this.idEmpleado = idEmpleado;
         this.idSucursal = idSucursal;
-        this.idPersona = idPersona;
-        this.idUsuario = idUsuario;
+        this.persona = persona;
+        this.usuario = usuario;
         this.activo = activo;
     }
 
-    // Getters y Setters
     public int getIdEmpleado() {
         return idEmpleado;
     }
@@ -45,20 +40,20 @@ public class Empleado {
         this.idSucursal = idSucursal;
     }
 
-    public int getIdPersona() {
-        return idPersona;
+    public Persona getPersona() {
+        return persona;
     }
 
-    public void setIdPersona(int idPersona) {
-        this.idPersona = idPersona;
+    public void setPersona(Persona persona) {
+        this.persona = persona;
     }
 
-    public int getIdUsuario() {
-        return idUsuario;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setIdUsuario(int idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     public int getActivo() {
@@ -69,15 +64,9 @@ public class Empleado {
         this.activo = activo;
     }
 
-    // Método toString (opcional)
     @Override
     public String toString() {
-        return "Empleado{" +
-                "idEmpleado=" + idEmpleado +
-                ", idSucursal=" + idSucursal +
-                ", idPersona=" + idPersona +
-                ", idUsuario=" + idUsuario +
-                ", activo=" + activo +
-                '}';
+        return "Empleado{" + "idEmpleado=" + idEmpleado + ", idSucursal=" + idSucursal + ", persona=" + persona + ", usuario=" + usuario + ", activo=" + activo + '}';
     }
+
 }
