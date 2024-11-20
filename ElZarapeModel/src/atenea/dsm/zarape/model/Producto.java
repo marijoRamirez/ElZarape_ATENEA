@@ -15,20 +15,20 @@ public class Producto {
     private String descripcion;
     private String foto;
     private double precio;
-    private int idCategoria;
+    private Categoria Categoria;
     private int activo;
 
     // Constructor vacío
     public Producto() {
     }
 
-    public Producto(int idProducto, String nombre, String descripcion, String foto, double precio, int idCategoria, int activo) {
+    public Producto(int idProducto, String nombre, String descripcion, String foto, double precio, Categoria Categoria, int activo) {
         this.idProducto = idProducto;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.foto = foto;
         this.precio = precio;
-        this.idCategoria = idCategoria;
+        this.Categoria = Categoria;
         this.activo = activo;
     }
 
@@ -72,12 +72,12 @@ public class Producto {
         this.precio = precio;
     }
 
-    public int getIdCategoria() {
-        return idCategoria;
+    public int getCategoria() {
+        return categoria;
     }
 
-    public void setIdCategoria(int idCategoria) {
-        this.idCategoria = idCategoria;
+    public void setIdCategoria(Categoria categoria) {
+        this.Categoria = Categoria;
     }
 
     public int getActivo() {
